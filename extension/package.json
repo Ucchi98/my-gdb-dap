@@ -1,0 +1,74 @@
+{
+  "name": "my-gdb-dap",
+  "displayName": "My GDB DAP",
+  "version": "1.0.0",
+  "publisher": "ucchi",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onDebug"
+  ],
+  "contributes": {
+    "debuggers": [
+      {
+        "type": "my-gdb-dap",
+        "label": "GDB DAP",
+        "languages": [
+          "c",
+          "cpp"
+        ],
+        "program": "./extension.js",
+
+        "supportsExceptionFilterOptions": false,
+
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "gdbPath",
+              "ocdPath",
+              "ocdOpts",
+              "program"
+            ],
+            "properties": {
+              "program": {
+                "description": "デバッグするバイナリ(elf)の絶対パス",
+                "type": "string"
+              },
+              "gdbPath": {
+                "description": "gdbの絶対パス",
+                "type": "string",
+                "default": "gdb"
+              },
+              "gdbOpts": {
+                "description": "gdbの起動オプション",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ocdPath": {
+                "description": "openocdの絶対パス",
+                "type": "string",
+                "default": "openocd"
+              },
+              "ocdOpts": {
+                "description": "openocdの起動オプション",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ocdAddr": {
+                "description": "openocdのアドレス",
+                "type": "string",
+                "default": "localhost:3333"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
