@@ -33,10 +33,10 @@ class MyGdbDapConfigurationFactory {
       const gdbOpts = [
         '--quiet',
         '--interpreter=dap',
-        '-ex', 'set remotetimeout 30',
-        '-ex', 'set target-async off',
-        '-ex', 'maintenance flush register-cache',
-        '-ex', `target remote ${config.ocdAddr}`
+//        '-ex', 'set remotetimeout 30',
+//        '-ex', 'set target-async off',
+//        '-ex', 'maintenance flush register-cache',
+//        '-ex', `target remote ${config.ocdAddr}`
       ];
       if(config.gdbOpts && Array.isArray(config.gdbOpts))
       {

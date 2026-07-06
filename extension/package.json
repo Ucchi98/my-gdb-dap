@@ -8,9 +8,16 @@
   },
   "main": "./extension.js",
   "activationEvents": [
-    "onDebug"
+    "onDebug",
+    "onCommand:my-gdb-dap.createLaunchJson"
   ],
   "contributes": {
+    "commands": [
+      {
+        "command": "my-gdb-dap.createLaunchJson",
+        "title": "Template: launch.jsonを作成"
+      }
+    ],
     "debuggers": [
       {
         "type": "my-gdb-dap",

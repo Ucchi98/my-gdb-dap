@@ -2,7 +2,8 @@ SRCS=	  extension/package.json
 SRCS+=	extension/extension.js
 SRCS+=	extension/myGdbDapConfigurationFactory.js
 SRCS+=	extension/myGdbDapDescriptorFactory.js
-SRCS+=	sample/launch.json
+SRCS+=	extension/myGdbDapTemplateManager.js
+SRCS+=	extension/template/launch.json
 SRCS+=  extension/${README}
 
 README=  README.md
@@ -18,6 +19,7 @@ CP=			cp
 CP_OPT=	-f
 
 all: ${SRCS}
+	@${RM} ${RM_OPT} ${VSIX}
 	@${ZIP} ${ZIP_OPT} ${VSIX} ${SRCS}
 
 extension/${README}: ${README}

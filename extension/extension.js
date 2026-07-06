@@ -2,8 +2,18 @@ const vscode = require('vscode');
 
 const MyGdbDapConfigurationFactory = require('./myGdbDapConfigurationFactory');
 const MyGdbDapDescriptorFactory = require('./myGdbDapDescriptorFactory');
+const MyGdbDapTemplateManager = require('./myGdbDapTemplateManager');
 
 function activate(context) {
+
+  // 0. テンプレートのコピーコマンドの登録
+  const mgdtm = new MyGdbDapTemplateManager(context);
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      'my-gdb-dap.createLaunchJson',
+      mgdtm.createLaunchJson
+    )
+  );
 
   // 1. DebugConfigurationProviderの登録
   const mgdcf = new MyGdbDapConfigurationFactory();
