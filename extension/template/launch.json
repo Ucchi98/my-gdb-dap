@@ -5,12 +5,9 @@
       "type": "my-gdb-dap",
       "request": "launch",
       "name": "GDB DAP",
-      "program": "${workspaceFolder}/build/blink.elf",
+      "program": "/full/path/to/elf",
       "gdbPath": "/full/path/to/gdb",
       "gdbOpts": [
-        "-x=${workspaceFolder}/build/gdbinit/symbols",
-        "-x=${workspaceFolder}/build/gdbinit/prefix_map",
-        "-x=${workspaceFolder}/build/gdbinit/connect"
       ],
       "ocdPath": "/full/path/to/openocd",
       "ocdOpts": [
