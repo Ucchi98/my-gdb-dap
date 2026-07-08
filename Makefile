@@ -23,7 +23,7 @@ all: ${SRCS}
 	@${ZIP} ${ZIP_OPT} ${VSIX} ${SRCS}
 
 extension/${README}: ${README}
-	@${CP} ${RM_OPT} ${README} $@
+	@${CP} ${CP_OPT} ${README} $@
 
 clean:
 	@${RM} ${RM_OPT} ${VSIX} extension/${README}
