@@ -34,7 +34,8 @@ VSCodeを使用できるように拡張機能を作成しました。
    - ocdPath: openocdコマンドへの絶対パス
    - ocdOpts: openocdコマンドへ与えるオプション
 ## その他
-そのうち、YouTubeに使い方動画をアップします。
+YouTubeに使い方動画をアップしました。
+[![](https://github.com/user-attachments/assets/06808725-e516-421a-bbc8-f1d2f27fe86e)](https://youtu.be/vHaSLxNUVN4?si=6hPakAvu8IjQtZqm)
 
 ## Authors
 - **Ucchi98** [GitHub](https://github.com/Ucchi98)
